@@ -14,7 +14,7 @@
             text-align: center;
         }
         table {
-            width: 60%;
+            width: 80%;
             margin: 0 auto;
             border-collapse: collapse;
             background-color: #fff;
@@ -44,60 +44,49 @@
     <thead>
         <tr>
             <th>Имя</th>
-            <th>Оценка</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
+            <th>Английский</th>
         </tr>
     </thead>
     <tbody id="students-table">
         <tr>
             <td>Савелий</td>
-            <td>
-                <select id="saveliy">
-                    <option value="">Выберите оценку</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </td>
+            <td><select id="saveliy-math"><option value="">Выберите оценку</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><select id="saveliy-physics"><option value="">Выберите оценку</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><select id="saveliy-chemistry"><option value="">Выберите оценку</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><select id="saveliy-history"><option value="">Выберите оценку</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
         </tr>
         <tr>
             <td>Рома</td>
-            <td>
-                <select id="roma">
-                    <option value="">Выберите оценку</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Саша</td>
-            <td>
-                <select id="sasha">
-                    <option value="">Выберите оценку</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-            </td>
-        </tr>
-        <tr>
-            <td>Миша</td>
-            <td>
-                <select id="misha">
-                    <option value="">Выберите оценку</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option> 
-                </select> 
-            </td> 
-        </tr> 
-    </tbody> 
-</table>
+            <td><select id="roma-math"><option value="">Выберите оценку</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select></td>
+            <td><select id="roma-physics"><option value="">Выберите оценку</option><option value="2">2</ option >< option >3< / option >< option >4< / option >< option >5< / option ></ select ></ td >
+             < td > < select id = "roma-chemistry" > < option > Выберите оценку< / option >< option >2< / option >< option >3< / option >< option >4< / option >< option >5< / option ></ select ></ td >
+             < td > < select id = "roma-history" > < option > Выберите оценку< / option >< option >2< / option >< option >3< / option >< option >4< / option >< option >5< / option ></ select ></ td >
+         </ tr >
+         < tr >
+             < td > Саша< / td >
+             < td >< select id = "sasha-math" > < опция значение = "" > Выберите оценку< / опция >< опция значение = "2" > 2< / опция >< опция значение = "3" > 3< / опция >< опция значение = "4" > 4< / опция >< опция значение = "5" > 5< / опция ></ select ></ td >
+             < td >< select id = "sasha-physics" > < опция значение = "" > Выберите оценку< / опция >< опция значение = "2" > 2< / опции >< опции значение = "3" > 3< / опции >< опции значение = "4" > 4< / опции >< опции значение = "5" > 5< / опции ></ select ></ td >
+             < td >< select id = "sasha-chemistry" > < опция значение = "" > Выберите оценку< / опции >< опции значение = "2" > 2< / опции >< опции значение = "3" > 3< / опции >< опции значение = "4" > 4< / опции >< опции значение = "5" > 5< / options ></ select ></ td >
+             < td >< select id = "sasha-history" > < opzione valore="" seleziona il voto </ opzione >> opzione valore=“2”>2<option valore=“3”>3<option valore=“4”>4<option valore=“5”>5<select></td>
+
+         </ tr >
+         <!-- Добавьте больше студентов по аналогии -->
+     </ tbody >
+ </ table >
 
 <button onclick="submitGrades()">Отправить оценки</button>
 
@@ -106,22 +95,24 @@
 <script>
 
 function submitGrades() {
-    const grades = {
-        Савелий: document.getElementById('saveliy').value,
-        Рома: document.getElementById('roma').value,
-        Саша: document.getElementById('sasha').value,
-        Миша: document.getElementById('misha').value
-    };
+    const students = ['Савелий', 'Рома', 'Саша']; // Добавьте имена студентов здесь
+    const subjects = ['math', 'physics', 'chemistry', 'history'];
+    
+    let gradesDisplayText = "<h2>Выставленные оценки:</h2>";
 
-    let displayText = "<h2>Выставленные оценки:</h2><ul>";
-    
-    for (const [name, grade] of Object.entries(grades)) {
-        displayText += `<li>${name}: ${grade ? grade : 'Не выставлена'}</li>`;
-    }
-    
-    displayText += "</ul>";
-    
-    document.getElementById('grades-display').innerHTML = displayText;
+    students.forEach(student => {
+        gradesDisplayText += `<h3>${student}</h3>`;
+        gradesDisplayText += "<ul>";
+        
+        subjects.forEach(subject => {
+            const gradeValue = document.getElementById(`${student.toLowerCase()}-${subject}`).value;
+            gradesDisplayText += `<li>${subject.charAt(0).toUpperCase() + subject.slice(1)}: ${gradeValue ? gradeValue : 'Не выставлена'}</li>`;
+        });
+        
+        gradesDisplayText += "</ul>";
+    });
+
+    document.getElementById('grades-display').innerHTML = gradesDisplayText;
 
     // Здесь можно добавить код для сохранения данных на сервере или в локальном хранилище
 }
@@ -129,4 +120,4 @@ function submitGrades() {
 </script>
 
 </body> 
-</html>
+</html> 
