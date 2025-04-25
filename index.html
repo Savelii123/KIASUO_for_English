@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Электронный дневник</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #000;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Электронный дневник</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Оценка</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Савелий</td>
+            <td>
+                <select id="saveliy">
+                    <option value="">Выберите оценку</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Рома</td>
+            <td>
+                <select id="roma">
+                    <option value="">Выберите оценку</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Саша</td>
+            <td>
+                <select id="sasha">
+                    <option value="">Выберите оценку</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Миша</td>
+            <td>
+                <select id="misha">
+                    <option value="">Выберите оценку</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select> 
+            </td> 
+        </tr> 
+    </tbody> 
+</table>
+
+<button onclick="submitGrades()">Отправить оценки</button>
+
+<script>
+
+function submitGrades() {
+    const grades = {
+        Савелий: document.getElementById('saveliy').value,
+        Рома: document.getElementById('roma').value,
+        Саша: document.getElementById('sasha').value,
+        Миша: document.getElementById('misha').value
+    };
+
+    console.log(grades);
+    alert("Оценки отправлены! Проверьте консоль для просмотра.");
+}
+
+</script>
+
+</body> 
+</html> 
